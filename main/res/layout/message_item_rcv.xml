@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="8dp">
+    <TextView
+        android:id="@+id/textViewMessageRcv"
+        android:text="hi man, how are you?"
+        android:background="@drawable/background_message_rcv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:maxWidth="240dp"
+        android:textColor="#000"
+        android:layout_marginTop="0dp"
+        android:layout_marginLeft="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSenderName" />
+
+    <TextView
+        android:id="@+id/textViewTimeOfRcvMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="0dp"
+        android:text="TextView"
+        android:textSize="10sp"
+        android:textColor="#B3BFBF"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewMessageRcv"
+        app:layout_constraintLeft_toRightOf="@+id/textViewMessageRcv" />
+
+    <TextView
+        android:id="@+id/textViewSenderName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textSize="12sp"
+        android:textColor="#B3BFBF"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="0dp" />
+</android.support.constraint.ConstraintLayout>

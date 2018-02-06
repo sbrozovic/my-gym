@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/suset_sea_group"
+    tools:context=".Modules.Members.AddEditMemberActivity">
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#80000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/view"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintLeft_creator="1" />
+
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginRight="0dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="0dp"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        android:layout_marginTop="0dp">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/view"
+            app:layout_constraintVertical_bias="0.0"
+            tools:layout_constraintBottom_creator="1"
+            tools:layout_constraintLeft_creator="1"
+            tools:layout_constraintRight_creator="1"
+            tools:layout_constraintTop_creator="1">
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="8dp"
+                android:orientation="horizontal"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                tools:layout_constraintLeft_creator="1"
+                tools:layout_constraintRight_creator="1"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/textViewAddressMembers">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:layout_editor_absoluteX="8dp"
+                    tools:layout_editor_absoluteY="8dp">
+
+                    <Spinner
+                        android:id="@+id/spinnerGenderMembers"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginStart="8dp"
+                        android:backgroundTint="#fff"
+                        android:dropDownSelector="#fff"
+                        android:popupBackground="#80000000"
+                        android:textColor="#fff"
+                        android:textSize="18dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/textViewGenderMembers"
+                        app:layout_constraintLeft_toRightOf="@+id/textViewGenderMembers"
+                        app:layout_constraintTop_toTopOf="@+id/textViewGenderMembers"
+                        tools:layout_constraintBottom_creator="1"
+                        tools:layout_constraintLeft_creator="1" />
+
+                    <Spinner
+                        android:id="@+id/spinnerTariff"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginStart="8dp"
+                        android:backgroundTint="#fff"
+                        android:dropDownSelector="#fff"
+                        android:popupBackground="#80000000"
+                        android:textColor="#fff"
+                        android:textSize="18dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/textViewTariffMembers"
+                        app:layout_constraintLeft_toRightOf="@+id/textViewTariffMembers"
+                        app:layout_constraintTop_toTopOf="@+id/textViewTariffMembers"
+                        app:layout_constraintVertical_bias="0.333" />
+
+                    <TextView
+                        android:id="@+id/textViewMemb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="55dp"
+                        android:layout_marginStart="55dp"
+                        android:layout_marginTop="27dp"
+                        android:text="@string/membership"
+                        android:textColor="#fff"
+                        android:textSize="20dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textViewGenderMembers" />
+
+                    <TextView
+                        android:id="@+id/textViewTariffMembers"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="32dp"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/tariff"
+                        android:textColor="#fff"
+                        android:textSize="18dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textViewPeriod" />
+
+                    <TextView
+                        android:id="@+id/textViewPeriod"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="32dp"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/period"
+                        android:textColor="#fff"
+                        android:textSize="18dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textViewMemb" />
+
+                    <Spinner
+                        android:id="@+id/spinnerPeriod"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginStart="8dp"
+                        android:backgroundTint="#fff"
+                        android:dropDownSelector="#fff"
+                        android:popupBackground="#80000000"
+                        android:textColor="#fff"
+                        android:textSize="18dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/textViewPeriod"
+                        app:layout_constraintLeft_toRightOf="@+id/textViewPeriod"
+                        app:layout_constraintTop_toTopOf="@+id/textViewPeriod"
+                        app:layout_constraintVertical_bias="0.51" />
+
+                    <EditText
+                        android:id="@+id/editTextEmailMembers"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginStart="8dp"
+                        android:ems="10"
+                        android:hint="npr: name@gmail.com"
+                        android:textColorHint="#C7CECE"
+                        android:inputType="textPersonName"
+                        android:textColor="#fff"
+                        android:textSize="18dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/textViewEmailMembers"
+                        app:layout_constraintLeft_toRightOf="@+id/textViewEmailMembers"
+                        app:layout_constraintTop_toTopOf="@+id/textViewEmailMembers" />
+
+                    <TextView
+                        android:id="@+id/textViewGenderMembers"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="32dp"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="35dp"
+                        android:text="@string/gender"
+                        android:textColor="#fff"
+                        android:textSize="18dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textViewEmailMembers" />
+
+                    <TextView
+                        android:id="@+id/textViewEmailMembers"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="32dp"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="24dp"
+                        android:text="@string/mail"
+                        android:textColor="#fff"
+                        android:textSize="18dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </android.support.constraint.ConstraintLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textViewNameMembers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="65dp"
+                android:text="@string/name"
+                android:textColor="#fff"
+                android:textSize="18dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewSurnameMembers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="32dp"
+                android:text="@string/surname"
+                android:textColor="#fff"
+                android:textSize="18dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewNameMembers" />
+
+            <TextView
+                android:id="@+id/textViewBirthDayMembers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="32dp"
+                android:text="@string/birth_day"
+                android:textColor="#fff"
+                android:textSize="18dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewSurnameMembers" />
+
+            <TextView
+                android:id="@+id/textViewPhoneMembers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="32dp"
+                android:text="@string/phone"
+                android:textColor="#fff"
+                android:textSize="18dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewBirthDayMembers" />
+
+            <TextView
+                android:id="@+id/textViewAddressMembers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="32dp"
+                android:text="@string/address"
+                android:textColor="#fff"
+                android:textSize="18dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewPhoneMembers" />
+
+            <EditText
+                android:id="@+id/editTextNameMembers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:textColor="#fff"
+                android:textSize="18dp"
+                app:layout_constraintBottom_toBottomOf="@+id/textViewNameMembers"
+                app:layout_constraintLeft_toRightOf="@+id/textViewNameMembers"
+                app:layout_constraintTop_toTopOf="@+id/textViewNameMembers"
+                app:layout_constraintVertical_bias="0.523" />
+
+            <EditText
+                android:id="@+id/editTextSurnameMembers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:textColor="#fff"
+                android:textSize="18dp"
+                app:layout_constraintBottom_toBottomOf="@+id/textViewSurnameMembers"
+                app:layout_constraintLeft_toRightOf="@+id/textViewSurnameMembers"
+                app:layout_constraintTop_toTopOf="@+id/textViewSurnameMembers" />
+
+            <EditText
+                android:id="@+id/editTextBirthDayMembers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                android:ems="10"
+                android:hint="npr: 12-10-1990"
+                android:textColorHint="#C7CECE"
+                android:inputType="textPersonName"
+                android:textColor="#fff"
+                android:textSize="18dp"
+                app:layout_constraintBottom_toBottomOf="@+id/textViewBirthDayMembers"
+                app:layout_constraintLeft_toRightOf="@+id/textViewBirthDayMembers"
+                app:layout_constraintTop_toTopOf="@+id/textViewBirthDayMembers" />
+
+            <EditText
+                android:id="@+id/editTextPhoneMembers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                android:ems="10"
+                android:inputType="phone"
+                android:textColor="#fff"
+                android:textSize="18dp"
+                app:layout_constraintBottom_toBottomOf="@+id/textViewPhoneMembers"
+                app:layout_constraintLeft_toRightOf="@+id/textViewPhoneMembers"
+                app:layout_constraintTop_toTopOf="@+id/textViewPhoneMembers" />
+
+            <EditText
+                android:id="@+id/editTextAddressMembers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:textColor="#fff"
+                android:textSize="18dp"
+                app:layout_constraintBottom_toBottomOf="@+id/textViewAddressMembers"
+                app:layout_constraintLeft_toRightOf="@+id/textViewAddressMembers"
+                app:layout_constraintTop_toTopOf="@+id/textViewAddressMembers" />
+
+            <Button
+                android:id="@+id/buttonSaveMembers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="67dp"
+                android:layout_marginRight="67dp"
+                android:layout_marginTop="24dp"
+                android:background="#80000000"
+                android:text="@string/save"
+                android:textColor="#fff"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="24dp" />
+
+            <Button
+                android:id="@+id/buttonCancelMembers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="76dp"
+                android:layout_marginStart="76dp"
+                android:layout_marginTop="24dp"
+                android:background="#40000000"
+                android:text="@string/cancel"
+                android:textColor="#fff"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="24dp" />
+
+            <ImageView
+                android:id="@+id/imageViewDelete"
+                android:layout_width="61dp"
+                android:layout_height="57dp"
+                android:visibility="gone"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/icons8_trash"
+                tools:layout_editor_absoluteX="334dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginRight="0dp" />
+
+            <TextView
+                android:id="@+id/textViewResetPass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="casual"
+                android:text="@string/reset_password"
+                android:textColor="@color/colorBlue"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:visibility="gone"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="24dp" />
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
+
+</android.support.constraint.ConstraintLayout>

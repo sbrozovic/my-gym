@@ -1,0 +1,185 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/climbing"
+    tools:context=".Modules.Welcome.Fragments.LoginFragment">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#4c000000"></View>
+    --ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textViewWelcome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="41dp"
+                android:fontFamily="casual"
+                android:gravity="center"
+                android:text="@string/welcome"
+                android:textAlignment="center"
+                android:textColor="#ffffff"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                app:layout_constraintHorizontal_bias="0.523"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_editor_absoluteX="7dp" />
+
+            <TextView
+                android:id="@+id/textViewSmallPriceList"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="16dp"
+                android:gravity="center"
+                android:padding="12dp"
+                android:text="@string/price_list"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewSmallAboutUs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/about_us"
+                android:padding="12dp"
+                android:textColor="@android:color/white"
+                android:layout_marginRight="15dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:id="@+id/textViewLoginToYourAccount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="casual"
+                android:text="@string/login_to_your_account"
+                android:textColor="@android:color/white"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                app:layout_constraintHorizontal_bias="0.509"
+                app:layout_constraintLeft_toLeftOf="@+id/textViewWelcome"
+                app:layout_constraintRight_toRightOf="@+id/textViewWelcome"
+                app:layout_constraintTop_toBottomOf="@+id/textViewWelcome" />
+
+            <TextView
+                android:id="@+id/textViewEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:textStyle="bold"
+                android:fontFamily="casual"
+                android:text="@string/mail"
+                android:textColor="@android:color/white"
+                android:textSize="20dp"
+                app:layout_constraintTop_toBottomOf="@+id/textViewLoginToYourAccount"
+                android:layout_marginLeft="0dp"
+                app:layout_constraintLeft_toLeftOf="@+id/editTextEmail" />
+
+            <EditText
+                android:id="@+id/editTextEmail"
+                android:layout_width="256dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:background="#40ffffff"
+                android:ems="10"
+                android:fontFamily="casual"
+                android:inputType="textPersonName"
+                android:textColor="@android:color/white"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewEmail"
+                tools:layout_editor_absoluteX="76dp" />
+
+            <EditText
+                android:id="@+id/editTextPassword"
+                android:layout_width="250dp"
+                android:layout_height="42dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:background="#40ffffff"
+                android:ems="10"
+                android:fontFamily="casual"
+                android:inputType="textPassword"
+                android:textColor="@android:color/white"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewPassword"
+                tools:layout_editor_absoluteX="82dp" />
+
+            <TextView
+                android:id="@+id/textViewPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:fontFamily="casual"
+                android:text="@string/password"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:textSize="20dp"
+                app:layout_constraintTop_toBottomOf="@+id/editTextEmail"
+                android:layout_marginLeft="0dp"
+                app:layout_constraintLeft_toLeftOf="@+id/editTextPassword" />
+
+            <Button
+                android:id="@+id/buttonLogin"
+                android:layout_width="109dp"
+                android:layout_height="52dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/text_back_small"
+                android:fontFamily="casual"
+                android:text="@string/login"
+                android:textColor="#ffffff"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintRight_toRightOf="@+id/editTextPassword"
+                app:layout_constraintTop_toBottomOf="@+id/editTextPassword" />
+
+            <ImageView
+                android:id="@+id/imageViewArrowRight"
+                android:layout_width="37dp"
+                android:layout_height="17dp"
+                app:srcCompat="@drawable/small_arrow"
+                android:layout_marginRight="16dp"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginBottom="0dp"
+                app:layout_constraintBottom_toTopOf="@+id/textViewSmallAboutUs" />
+            <ImageView
+                android:id="@+id/imageViewArrowLeft"
+                android:layout_width="37dp"
+                android:layout_height="17dp"
+                android:scaleX="-1"
+                app:srcCompat="@drawable/small_arrow"
+                android:layout_marginBottom="0dp"
+                app:layout_constraintBottom_toTopOf="@+id/textViewSmallPriceList"
+                android:layout_marginLeft="16dp"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+        </android.support.constraint.ConstraintLayout>
+    --ScrollView>
+
+</FrameLayout>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+   <TextView
+        android:id="@+id/textViewLogOff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       android:text="@string/logOff"
+
+        android:textColor="#fff"
+       android:layout_marginTop="0dp"
+       app:layout_constraintTop_toBottomOf="@+id/imageViewLogout"
+       android:layout_marginLeft="0dp"
+       app:layout_constraintLeft_toLeftOf="@+id/imageViewLogout"
+       android:layout_marginRight="0dp"
+       app:layout_constraintRight_toRightOf="@+id/imageViewLogout"
+       app:layout_constraintHorizontal_bias="0.0"
+       app:layout_constraintBottom_toBottomOf="parent"
+       android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:id="@+id/textViewMembership"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/membership"
+        android:gravity="center"
+        android:textColor="#fff"
+        android:layout_marginLeft="0dp"
+        app:layout_constraintLeft_toLeftOf="@+id/imageViewMembershipCard"
+        android:layout_marginRight="0dp"
+        app:layout_constraintRight_toRightOf="@+id/imageViewMembershipCard"
+        app:layout_constraintHorizontal_bias="0.515"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewMembershipCard"
+        app:layout_constraintVertical_bias="0.538" />
+
+    <TextView
+        android:id="@+id/textViewEditMember"
+        android:layout_width="59dp"
+        android:layout_height="19dp"
+        android:text="@string/edit"
+        android:textColor="#fff"
+        android:gravity="center"
+        android:layout_marginLeft="0dp"
+        app:layout_constraintLeft_toLeftOf="@+id/imageViewEdit"
+        android:layout_marginRight="0dp"
+        app:layout_constraintRight_toRightOf="@+id/imageViewEdit"
+        android:layout_marginTop="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewEdit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintVertical_bias="0.466" />
+
+ <ImageView
+     android:id="@+id/imageViewLogout"
+     android:layout_width="47dp"
+     android:layout_height="41dp"
+     android:layout_marginLeft="29dp"
+     android:layout_marginTop="16dp"
+     app:layout_constraintLeft_toLeftOf="parent"
+     app:layout_constraintTop_toTopOf="parent"
+     app:srcCompat="@drawable/logout" />
+
+ <ImageView
+     android:id="@+id/imageViewEdit"
+     android:layout_width="47dp"
+     android:layout_height="41dp"
+     android:layout_marginRight="29dp"
+     android:layout_marginTop="16dp"
+     app:layout_constraintRight_toRightOf="parent"
+     app:layout_constraintTop_toTopOf="parent"
+     app:srcCompat="@mipmap/ic_settings" />
+
+ <ImageView
+     android:id="@+id/imageViewMembershipCard"
+     android:layout_width="47dp"
+     android:layout_height="41dp"
+     app:srcCompat="@mipmap/ic_card_membership"
+     app:layout_constraintTop_toTopOf="parent"
+     android:layout_marginTop="16dp"
+     app:layout_constraintLeft_toRightOf="@+id/imageViewLogout"
+     android:layout_marginLeft="8dp"
+     app:layout_constraintRight_toLeftOf="@+id/imageViewEdit"
+     android:layout_marginRight="8dp" />
+</android.support.constraint.ConstraintLayout>

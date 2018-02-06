@@ -1,0 +1,220 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/spiderman"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Common.Fragments.AboutUsFragment">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#4c000000"></View>
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipeToRefreshAboutUsFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textViewWelcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="60dp"
+            android:fontFamily="casual"
+            android:gravity="center"
+            android:text="@string/about_us"
+            android:textAlignment="center"
+            android:textColor="#ffffff"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            app:layout_constraintHorizontal_bias="0.523"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewContactUs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="casual"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="@string/contact_us"
+            android:textColor="#00B2EE"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_marginRight="8dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/textViewSmallLogin2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="16dp"
+            android:text="@string/login"
+            android:padding="12dp"
+            android:textColor="#fff"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageViewArrowLogin2"
+            android:layout_width="37dp"
+            android:layout_height="17dp"
+            android:layout_marginBottom="0dp"
+            android:layout_marginLeft="16dp"
+            android:scaleX="-1"
+            app:layout_constraintBottom_toTopOf="@+id/textViewSmallLogin2"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:srcCompat="@drawable/small_arrow" />
+
+        <ImageView
+            android:id="@+id/imageViewPhone2"
+            android:layout_width="33dp"
+            android:layout_height="31dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewContactUs"
+            app:layout_constraintRight_toLeftOf="@+id/textViewContactUs"
+            app:layout_constraintTop_toTopOf="@+id/textViewContactUs"
+            app:srcCompat="@drawable/phone" />
+
+        <TextView
+            android:id="@+id/textViewGymPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="68dp"
+            android:text="@string/phone"
+            android:textColor="#fff"
+            android:textSize="18dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewWelcome" />
+
+        <EditText
+            android:id="@+id/editTextGymPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="0dp"
+            android:ems="10"
+            android:textSize="18dp"
+            android:inputType="textPersonName"
+            android:textColor="#fff"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewGymPhone"
+            app:layout_constraintLeft_toRightOf="@+id/textViewGymPhone"
+            app:layout_constraintTop_toTopOf="@+id/textViewGymPhone"
+            app:layout_constraintVertical_bias="0.56" />
+
+        <EditText
+            android:id="@+id/editTextGymEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="0dp"
+            android:ems="10"
+            android:textSize="18dp"
+            android:inputType="textPersonName"
+            android:textColor="#fff"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewGymEmail"
+            app:layout_constraintLeft_toRightOf="@+id/textViewGymEmail"
+            app:layout_constraintTop_toTopOf="@+id/textViewGymEmail" />
+
+        <TextView
+            android:id="@+id/textViewGymEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="32dp"
+            android:text="@string/mail"
+            android:textColor="#fff"
+            android:textSize="18dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextGymPhone" />
+
+        <TextView
+            android:id="@+id/textViewGymAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="32dp"
+            android:text="@string/address"
+            android:textColor="#fff"
+            android:textSize="18dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewGymEmail" />
+
+        <TextView
+            android:id="@+id/textViewWorkingHours"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="32dp"
+            android:text="@string/working_hours"
+            android:textColor="#fff"
+            android:textSize="18dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewGymAddress" />
+
+        <EditText
+            android:id="@+id/editTextGymAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="0dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:textColor="#fff"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewGymAddress"
+            app:layout_constraintLeft_toRightOf="@+id/textViewGymAddress"
+            app:layout_constraintTop_toTopOf="@+id/textViewGymAddress"
+            app:layout_constraintVertical_bias="0.51" />
+
+        <EditText
+            android:id="@+id/editTextWoringHours"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="0dp"
+            android:ems="10"
+            android:maxLines="10"
+            android:lines="3"
+            android:inputType="textPersonName"
+            android:textColor="#fff"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewWorkingHours"
+            app:layout_constraintLeft_toRightOf="@+id/textViewWorkingHours"
+            app:layout_constraintTop_toTopOf="@+id/textViewWorkingHours"
+            app:layout_constraintVertical_bias="0.51" />
+
+        <Button
+            android:id="@+id/buttonSaveAboutUsEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="26dp"
+            android:textColor="#fff"
+            android:visibility="gone"
+            android:text="@string/save"
+            android:background="#80000000"
+            android:textSize="20dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextWoringHours" />
+
+    </android.support.constraint.ConstraintLayout>
+    </android.support.v4.widget.SwipeRefreshLayout>
+</FrameLayout>

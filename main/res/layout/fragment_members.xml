@@ -1,0 +1,227 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/suset_sea_group"
+    tools:context=".Modules.Members.MembersFragment">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000"></View>
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipeToRefreshMembersFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textViewMembers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="32dp"
+            android:fontFamily="casual"
+            android:gravity="center"
+            android:text="@string/members"
+            android:textAlignment="center"
+            android:textColor="#ffffff"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            app:layout_constraintHorizontal_bias="0.501"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewCoach"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="casual"
+            android:text="@string/coach"
+            android:textColor="#fff"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewMembers" />
+
+        <TextView
+            android:id="@+id/textViewCoachName"
+            android:layout_width="wrap_content"
+            android:layout_height="31dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="casual"
+            android:textColor="#fff"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toRightOf="@+id/textViewCoach"
+            app:layout_constraintTop_toBottomOf="@+id/textViewMembers" />
+
+        <TextView
+            android:id="@+id/textViewMembershipStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="casual"
+            android:text="@string/membership_status"
+            android:textColor="#fff"
+            android:textSize="15dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewCoach" />
+
+        <RadioGroup
+            android:id="@+id/radioGroupMembershipStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintLeft_toLeftOf="@+id/textViewMembershipStatus"
+            app:layout_constraintTop_toBottomOf="@+id/textViewMembershipStatus">
+
+            <RadioButton
+                android:id="@+id/radioButtonActive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="#00B2EE"
+                android:fontFamily="casual"
+                android:text="@string/active"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="32dp"
+                tools:layout_editor_absoluteY="110dp" />
+
+            <RadioButton
+                android:id="@+id/radioButtonExpired"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="#00B2EE"
+                android:fontFamily="casual"
+                android:text="@string/expired"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="32dp"
+                tools:layout_editor_absoluteY="150dp" />
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/search_members"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:fontFamily="casual"
+            android:hint="@string/search_members"
+            android:inputType="textPersonName"
+            android:textColor="#fff"
+            android:textColorHint="#fff"
+            app:layout_constraintHorizontal_bias="0.504"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroupMembershipStatus" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fabAddMembers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="@dimen/fab_margin"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp"
+            android:src="@mipmap/ic_add"
+            app:backgroundTint="#40000000"
+            app:fabSize="mini"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerViewMembers"
+            android:layout_width="362dp"
+            android:layout_height="266dp"
+            android:layout_marginBottom="24dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="16dp"
+            android:childDivider="#00000000"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.515"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/search_members"
+            app:layout_constraintVertical_bias="0.51"
+            tools:layout_editor_absoluteX="23dp"
+            tools:layout_editor_absoluteY="313dp" />
+
+        <TextView
+            android:id="@+id/textViewMembersInGym"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="32dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/members_in_gym"
+            android:textColor="#fff"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewCoach"
+            tools:fontFamily="casual" />
+
+        <RadioGroup
+            android:id="@+id/radioGroupMembersInGym"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+
+            app:layout_constraintLeft_toLeftOf="@+id/textViewMembersInGym"
+            app:layout_constraintTop_toBottomOf="@+id/textViewMembersInGym">
+
+            <RadioButton
+                android:id="@+id/radioButtonPresent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="#00B2EE"
+                android:fontFamily="casual"
+                android:text="@string/present"
+                android:textColor="#fff"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/radioButtonNotPresent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="#00B2EE"
+                android:fontFamily="casual"
+                android:text="@string/not_present"
+                android:textColor="#fff"
+                android:textStyle="bold" />
+        </RadioGroup>
+
+        <ImageView
+            android:id="@+id/imageViewSingOutBossStaff"
+            android:layout_width="42dp"
+            android:layout_height="43dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/icons8_exit_sign_80" />
+
+    </android.support.constraint.ConstraintLayout>
+</android.support.v4.widget.SwipeRefreshLayout>
+</FrameLayout>
