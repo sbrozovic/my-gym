@@ -1,6 +1,7 @@
 # my-gym
 MyGym app represents a system for keeping records of all members and staff of the gym.
-It also contains some additional features (eg the number of members in the gym) so that users have a better insight into the gym. 
+Employees at the gym have an overview of all the members of the gym. They can add new members, change information on existing members or delete a member. The boss has the same set of options as the employees. Additionaly, he can add, delete and change informations for employees. 
+There is also a chart where members can communicate with employees.
 
 ## Installing
 Since the project contains only frontend, if it's downloaded it can't be compiled
